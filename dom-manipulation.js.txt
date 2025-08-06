@@ -1,0 +1,16 @@
+// dom-manipulation.js
+// Dynamically updates the DOM
+
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("content");
+    const button = document.createElement("button");
+    button.textContent = "Click me";
+
+    button.addEventListener("click", () => {
+        const p = document.createElement("p");
+        p.textContent = "You clicked the button!";
+        container.appendChild(p);
+    });
+
+    container.appendChild(button);
+});
